@@ -47,7 +47,7 @@ class App extends Component {
       }
       this.setState({ loading: false})
     } else {
-      window.alert('Marketplace contract not deployed to detected network.')
+      window.alert('[Error]::Marketplace contract not deployed to detected network.')
     }
   }
 
