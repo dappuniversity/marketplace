@@ -22,7 +22,7 @@ contract('Marketplace', ([deployer, seller, buyer]) => {
 
     it('has a name', async () => {
       const name = await marketplace.name()
-      assert.equal(name, 'Agency Marketplace')
+      assert.equal(name, 'InsureNET Marketplace')
     })
   })
 

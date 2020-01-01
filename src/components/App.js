@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from 'react';
 import Web3 from 'web3'
 import logo from '../logo.png';
@@ -57,7 +58,7 @@ class App extends Component {
       account: '',
       productCount: 0,
       products: [],
-      loading: true
+      loading: false // I changed to false to see what happens
     }
 
     this.createProduct = this.createProduct.bind(this)
@@ -86,6 +87,7 @@ class App extends Component {
         <Navbar account={this.state.account} />
         <div className="container-fluid mt-5">
           <div className="row">
+            <img src={logo} alt='Agency Logo'/>
             <main role="main" className="col-lg-12 d-flex">
               { this.state.loading
                 ? <div id="loader" className="text-center"><p className="text-center">Loading...</p></div>

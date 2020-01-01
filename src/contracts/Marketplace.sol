@@ -30,14 +30,14 @@ contract Marketplace {
     );
 
     constructor() public {
-        name = "Agency Marketplace";
+        name = "InsureNET Marketplace";
     }
 
     function createProduct(string memory _name, uint _price) public {
         // Require a valid name
-        require(bytes(_name).length > 0);
+        require(bytes(_name).length > 0, "Error");
         // Require a valid price
-        require(_price > 0);
+        require(_price > 0, "Error");
         // Increment product count
         productCount ++;
         // Create the product
@@ -52,13 +52,13 @@ contract Marketplace {
         // Fetch the owner
         address payable _seller = _product.owner;
         // Make sure the product has a valid id
-        require(_product.id > 0 && _product.id <= productCount);
+        require(_product.id > 0 && _product.id <= productCount, "Error");
         // Require that there is enough Ether in the transaction
-        require(msg.value >= _product.price);
+        require(msg.value >= _product.price, "Error");
         // Require that the product has not been purchased already
-        require(!_product.purchased);
+        require(!_product.purchased, "Error");
         // Require that the buyer is not the seller
-        require(_seller != msg.sender);
+        require(_seller != msg.sender, "Error");
         // Transfer ownership to the buyer
         _product.owner = msg.sender;
         // Mark as purchased
