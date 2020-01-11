@@ -3,7 +3,7 @@ pragma solidity ^0.5.0;
 contract SimpleMarketplace {
     // Application & Workflow
     string public ApplicationName;// = "SimpleMarketplace";
-    string internal WorkflowName = "Agency Marketplace";
+    string internal WorkflowName = "InsureNET Marketplace";
 
     // StateType
     enum  StateType {
@@ -18,6 +18,14 @@ contract SimpleMarketplace {
         uint price;
         address payable owner;
         bool purchased;
+    }
+
+    struct Agency {
+        uint id;
+        string name;
+        uint code;
+        address payable agent;
+        bool active;
     }
 
     event ProductCreated(
@@ -64,7 +72,7 @@ contract SimpleMarketplace {
     mapping(uint => Product) public products;
 
     constructor (string memory description, uint256 price) public {
-        ApplicationName = "Agency Marketplace";
+        ApplicationName = "InsureNET Marketplace";
         InstanceOwner = msg.sender;
         AskingPrice = price;
         Description = description;

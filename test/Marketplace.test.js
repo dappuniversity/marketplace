@@ -38,6 +38,7 @@ contract('Marketplace', ([deployer, seller, buyer]) => {
       // SUCCESS
       assert.equal(productCount, 1)
       const event = result.logs[0].args
+      console.log(result.logs);
       assert.equal(event.id.toNumber(), productCount.toNumber(), 'id is correct')
       assert.equal(event.name, 'iPhone X', 'name is correct')
       assert.equal(event.price, '1000000000000000000', 'price is correct')
