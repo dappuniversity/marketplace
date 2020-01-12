@@ -87,10 +87,14 @@ class App extends Component {
         <Navbar account={this.state.account} />
         <div className="container-fluid mt-5">
           <div className="row">
-            <img src={logo} alt='Agency Logo'/>
+          <p>&nbsp;</p>
+            {/* <img src={logo} alt='Agency Logo' height='50' width='50' /> */}
             <main role="main" className="col-lg-12 d-flex">
               { this.state.loading
-                ? <div id="loader" className="text-center"><p className="text-center">Loading...</p></div>
+                ? <div id="loader" 
+                        className="text-center">
+                      <p className="text-center">Loading...</p>
+                  </div>
                 : <Main
                   products={this.state.products}
                   createProduct={this.createProduct}

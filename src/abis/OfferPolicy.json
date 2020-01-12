@@ -1,0 +1,2239 @@
+{
+  "contractName": "OfferPolicy",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "InstanceOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "OfferPrice",
+      "outputs": [
+        {
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "products",
+      "outputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "coverages",
+          "type": "string"
+        },
+        {
+          "name": "policyNumber",
+          "type": "string"
+        },
+        {
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "name": "price",
+          "type": "uint256"
+        },
+        {
+          "name": "commission",
+          "type": "uint256"
+        },
+        {
+          "name": "active",
+          "type": "bool"
+        },
+        {
+          "name": "purchased",
+          "type": "bool"
+        },
+        {
+          "name": "renewable",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "Description",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "InstanceBuyer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "binders",
+      "outputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "price",
+          "type": "uint256"
+        },
+        {
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "name": "available",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "binderCount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "policyCount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "AskingPrice",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "State",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_name",
+          "type": "string"
+        }
+      ],
+      "name": "generatePolicy",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"InstanceOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"OfferPrice\",\"outputs\":[{\"name\":\"\",\"type\":\"int256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"products\",\"outputs\":[{\"name\":\"id\",\"type\":\"uint256\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"coverages\",\"type\":\"string\"},{\"name\":\"policyNumber\",\"type\":\"string\"},{\"name\":\"owner\",\"type\":\"address\"},{\"name\":\"price\",\"type\":\"uint256\"},{\"name\":\"commission\",\"type\":\"uint256\"},{\"name\":\"active\",\"type\":\"bool\"},{\"name\":\"purchased\",\"type\":\"bool\"},{\"name\":\"renewable\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"Description\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_name\",\"type\":\"string\"}],\"name\":\"generatePolicy\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"InstanceBuyer\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"binders\",\"outputs\":[{\"name\":\"id\",\"type\":\"uint256\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"price\",\"type\":\"uint256\"},{\"name\":\"owner\",\"type\":\"address\"},{\"name\":\"available\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"binderCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"policyCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"AskingPrice\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"State\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/jaxco/source/repos/BlockChain/Etherium/Marketplace/marketplace/src/contracts/OfferPolicy.sol\":\"OfferPolicy\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/jaxco/source/repos/BlockChain/Etherium/Marketplace/marketplace/src/contracts/OfferPolicy.sol\":{\"keccak256\":\"0x45ef70c3478794bf5247a202ad10a05e48a13907286cd832f6f0430b214d88eb\",\"urls\":[\"bzzr://a3efe3c415d48cde537af7c8a8a25ef23f1bf8bb846de8b0fce2b3ca1332cf5b\"]}},\"version\":1}",
+  "bytecode": "0x60806040526000600755600060095534801561001a57600080fd5b50610d0b8061002a6000396000f3fe6080604052600436106100a75760003560e01c8063b7303ba111610064578063b7303ba1146104fe578063c8c8c9f214610555578063d2caa22c14610655578063de54d42914610680578063ec69f29f146106ab578063f1b6dccd146106d6576100a7565b806306fdde03146100ac57806317200b6c1461013c57806353070152146101935780637acc0b20146101be5780638191745f146103b35780639715b8f114610443575b600080fd5b3480156100b857600080fd5b506100c161070f565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101015780820151818401526020810190506100e6565b50505050905090810190601f16801561012e5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561014857600080fd5b506101516107ad565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561019f57600080fd5b506101a86107d3565b6040518082815260200191505060405180910390f35b3480156101ca57600080fd5b506101f7600480360360208110156101e157600080fd5b81019080803590602001909291905050506107d9565b604051808b81526020018060200180602001806020018a73ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200189815260200188815260200187151515158152602001861515151581526020018515151515815260200184810384528d818151815260200191508051906020019080838360005b838110156102a1578082015181840152602081019050610286565b50505050905090810190601f1680156102ce5780820380516001836020036101000a031916815260200191505b5084810383528c818151815260200191508051906020019080838360005b838110156103075780820151818401526020810190506102ec565b50505050905090810190601f1680156103345780820380516001836020036101000a031916815260200191505b5084810382528b818151815260200191508051906020019080838360005b8381101561036d578082015181840152602081019050610352565b50505050905090810190601f16801561039a5780820380516001836020036101000a031916815260200191505b509d505050505050505050505050505060405180910390f35b3480156103bf57600080fd5b506103c8610a3c565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156104085780820151818401526020810190506103ed565b50505050905090810190601f1680156104355780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6104fc6004803603602081101561045957600080fd5b810190808035906020019064010000000081111561047657600080fd5b82018360208201111561048857600080fd5b803590602001918460018302840111640100000000831117156104aa57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610ada565b005b34801561050a57600080fd5b50610513610af4565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561056157600080fd5b5061058e6004803603602081101561057857600080fd5b8101908080359060200190929190505050610b1a565b60405180868152602001806020018581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183151515158152602001828103825286818151815260200191508051906020019080838360005b838110156106165780820151818401526020810190506105fb565b50505050905090810190601f1680156106435780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390f35b34801561066157600080fd5b5061066a610c15565b6040518082815260200191505060405180910390f35b34801561068c57600080fd5b50610695610c1b565b6040518082815260200191505060405180910390f35b3480156106b757600080fd5b506106c0610c21565b6040518082815260200191505060405180910390f35b3480156106e257600080fd5b506106eb610c27565b604051808260048111156106fb57fe5b60ff16815260200191505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107a55780601f1061077a576101008083540402835291602001916107a5565b820191906000526020600020905b81548152906001019060200180831161078857829003601f168201915b505050505081565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60065481565b6008602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561088b5780601f106108605761010080835404028352916020019161088b565b820191906000526020600020905b81548152906001019060200180831161086e57829003601f168201915b505050505090806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109295780601f106108fe57610100808354040283529160200191610929565b820191906000526020600020905b81548152906001019060200180831161090c57829003601f168201915b505050505090806003018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109c75780601f1061099c576101008083540402835291602001916109c7565b820191906000526020600020905b8154815290600101906020018083116109aa57829003601f168201915b5050505050908060040160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060050154908060060154908060070160009054906101000a900460ff16908060070160019054906101000a900460ff16908060070160029054906101000a900460ff1690508a565b60038054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610ad25780601f10610aa757610100808354040283529160200191610ad2565b820191906000526020600020905b815481529060010190602001808311610ab557829003601f168201915b505050505081565b8060009080519060200190610af0929190610c3a565b5050565b600560019054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600a602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610bcc5780601f10610ba157610100808354040283529160200191610bcc565b820191906000526020600020905b815481529060010190602001808311610baf57829003601f168201915b5050505050908060020154908060030160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060030160149054906101000a900460ff16905085565b60095481565b60075481565b60045481565b600560009054906101000a900460ff1681565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610c7b57805160ff1916838001178555610ca9565b82800160010185558215610ca9579182015b82811115610ca8578251825591602001919060010190610c8d565b5b509050610cb69190610cba565b5090565b610cdc91905b80821115610cd8576000816000905550600101610cc0565b5090565b9056fea165627a7a72305820642fb36c7337669096cb3f20c3c41c435b276d63a73c06aa6e7e3d00baba325f0029",
+  "deployedBytecode": "0x6080604052600436106100a75760003560e01c8063b7303ba111610064578063b7303ba1146104fe578063c8c8c9f214610555578063d2caa22c14610655578063de54d42914610680578063ec69f29f146106ab578063f1b6dccd146106d6576100a7565b806306fdde03146100ac57806317200b6c1461013c57806353070152146101935780637acc0b20146101be5780638191745f146103b35780639715b8f114610443575b600080fd5b3480156100b857600080fd5b506100c161070f565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101015780820151818401526020810190506100e6565b50505050905090810190601f16801561012e5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561014857600080fd5b506101516107ad565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561019f57600080fd5b506101a86107d3565b6040518082815260200191505060405180910390f35b3480156101ca57600080fd5b506101f7600480360360208110156101e157600080fd5b81019080803590602001909291905050506107d9565b604051808b81526020018060200180602001806020018a73ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200189815260200188815260200187151515158152602001861515151581526020018515151515815260200184810384528d818151815260200191508051906020019080838360005b838110156102a1578082015181840152602081019050610286565b50505050905090810190601f1680156102ce5780820380516001836020036101000a031916815260200191505b5084810383528c818151815260200191508051906020019080838360005b838110156103075780820151818401526020810190506102ec565b50505050905090810190601f1680156103345780820380516001836020036101000a031916815260200191505b5084810382528b818151815260200191508051906020019080838360005b8381101561036d578082015181840152602081019050610352565b50505050905090810190601f16801561039a5780820380516001836020036101000a031916815260200191505b509d505050505050505050505050505060405180910390f35b3480156103bf57600080fd5b506103c8610a3c565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156104085780820151818401526020810190506103ed565b50505050905090810190601f1680156104355780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6104fc6004803603602081101561045957600080fd5b810190808035906020019064010000000081111561047657600080fd5b82018360208201111561048857600080fd5b803590602001918460018302840111640100000000831117156104aa57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610ada565b005b34801561050a57600080fd5b50610513610af4565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561056157600080fd5b5061058e6004803603602081101561057857600080fd5b8101908080359060200190929190505050610b1a565b60405180868152602001806020018581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183151515158152602001828103825286818151815260200191508051906020019080838360005b838110156106165780820151818401526020810190506105fb565b50505050905090810190601f1680156106435780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390f35b34801561066157600080fd5b5061066a610c15565b6040518082815260200191505060405180910390f35b34801561068c57600080fd5b50610695610c1b565b6040518082815260200191505060405180910390f35b3480156106b757600080fd5b506106c0610c21565b6040518082815260200191505060405180910390f35b3480156106e257600080fd5b506106eb610c27565b604051808260048111156106fb57fe5b60ff16815260200191505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107a55780601f1061077a576101008083540402835291602001916107a5565b820191906000526020600020905b81548152906001019060200180831161078857829003601f168201915b505050505081565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60065481565b6008602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561088b5780601f106108605761010080835404028352916020019161088b565b820191906000526020600020905b81548152906001019060200180831161086e57829003601f168201915b505050505090806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109295780601f106108fe57610100808354040283529160200191610929565b820191906000526020600020905b81548152906001019060200180831161090c57829003601f168201915b505050505090806003018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109c75780601f1061099c576101008083540402835291602001916109c7565b820191906000526020600020905b8154815290600101906020018083116109aa57829003601f168201915b5050505050908060040160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060050154908060060154908060070160009054906101000a900460ff16908060070160019054906101000a900460ff16908060070160029054906101000a900460ff1690508a565b60038054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610ad25780601f10610aa757610100808354040283529160200191610ad2565b820191906000526020600020905b815481529060010190602001808311610ab557829003601f168201915b505050505081565b8060009080519060200190610af0929190610c3a565b5050565b600560019054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600a602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610bcc5780601f10610ba157610100808354040283529160200191610bcc565b820191906000526020600020905b815481529060010190602001808311610baf57829003601f168201915b5050505050908060020154908060030160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060030160149054906101000a900460ff16905085565b60095481565b60075481565b60045481565b600560009054906101000a900460ff1681565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610c7b57805160ff1916838001178555610ca9565b82800160010185558215610ca9579182015b82811115610ca8578251825591602001919060010190610c8d565b5b509050610cb69190610cba565b5090565b610cdc91905b80821115610cd8576000816000905550600101610cc0565b5090565b9056fea165627a7a72305820642fb36c7337669096cb3f20c3c41c435b276d63a73c06aa6e7e3d00baba325f0029",
+  "sourceMap": "27:1226:3:-;;;1007:1;981:27;;1104:1;1078:27;;27:1226;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:1226:3;;;;;;;",
+  "deployedSourceMap": "27:1226:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;55:18;;8:9:-1;5:2;;;30:1;27;20:12;5:2;55:18:3;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;55:18:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;748:28;;8:9:-1;5:2;;;30:1;27;20:12;5:2;748:28:3;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;930:21;;8:9:-1;5:2;;;30:1;27;20:12;5:2;930:21:3;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1015:39;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1015:39:3;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1015:39:3;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1015:39:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1015:39:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1015:39:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;783:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;783:25:3;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;783:25:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1159:91;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1159:91:3;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;1159:91:3;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;1159:91:3;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;1159:91:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;1159:91:3;;;;;;;;;;;;;;;:::i;:::-;;895:28;;8:9:-1;5:2;;;30:1;27;20:12;5:2;895:28:3;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1112:38;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1112:38:3;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1112:38:3;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1112:38:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1078:27;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1078:27:3;;;:::i;:::-;;;;;;;;;;;;;;;;;;;981;;8:9:-1;5:2;;;30:1;27;20:12;5:2;981:27:3;;;:::i;:::-;;;;;;;;;;;;;;;;;;;815:23;;8:9:-1;5:2;;;30:1;27;20:12;5:2;815:23:3;;;:::i;:::-;;;;;;;;;;;;;;;;;;;845:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;845:22:3;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;55:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;748:28::-;;;;;;;;;;;;;:::o;930:21::-;;;;:::o;1015:39::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;783:25::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1159:91::-;1237:5;1230:4;:12;;;;;;;;;;;;:::i;:::-;;1159:91;:::o;895:28::-;;;;;;;;;;;;;:::o;1112:38::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1078:27::-;;;;:::o;981:::-;;;;:::o;815:23::-;;;;:::o;845:22::-;;;;;;;;;;;;;:::o;27:1226::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\r\n\r\ncontract OfferPolicy {\r\n    string public name;\r\n    uint id;\r\n\r\n     struct Policy {\r\n        uint id;\r\n        string name;\r\n        string coverages;\r\n        string policyNumber;\r\n        address payable owner;\r\n        uint price;\r\n        uint commission;\r\n        bool active;\r\n        bool purchased;\r\n        bool renewable;\r\n    }\r\n\r\n    // Describe the Binder\r\n    struct Binder {\r\n        uint id;\r\n        string name;\r\n        uint price;\r\n        address payable owner;\r\n        bool available;\r\n    }\r\n\r\n    // StateType\r\n    enum  StateType {\r\n        PolicyAvailable,\r\n        BinderAvailableForPolicy,\r\n        OfferPlaced,\r\n        OfferAccepted,\r\n        OfferDeclined\r\n    }\r\n    // Owner Info\r\n    address public InstanceOwner;\r\n    string public Description;\r\n    uint public AskingPrice;\r\n    StateType public State;\r\n\r\n    // Buyer Info\r\n    address public InstanceBuyer;\r\n    int public OfferPrice;\r\n\r\n    // Product Info\r\n    uint public policyCount = 0;\r\n    mapping(uint => Policy) public products;\r\n\r\n    // Binder\r\n    uint public binderCount = 0;\r\n    mapping(uint => Binder) public binders;\r\n\r\n    function generatePolicy(string memory _name) public payable {\r\n        name = _name;\r\n    }\r\n}",
+  "sourcePath": "C:/Users/jaxco/source/repos/BlockChain/Etherium/Marketplace/marketplace/src/contracts/OfferPolicy.sol",
+  "ast": {
+    "absolutePath": "/C/Users/jaxco/source/repos/BlockChain/Etherium/Marketplace/marketplace/src/contracts/OfferPolicy.sol",
+    "exportedSymbols": {
+      "OfferPolicy": [
+        604
+      ]
+    },
+    "id": 605,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 525,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 604,
+        "linearizedBaseContracts": [
+          604
+        ],
+        "name": "OfferPolicy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 527,
+            "name": "name",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "55:18:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 526,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "55:6:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 529,
+            "name": "id",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "80:7:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 528,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "80:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "OfferPolicy.Policy",
+            "id": 550,
+            "members": [
+              {
+                "constant": false,
+                "id": 531,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "122:7:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 530,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "122:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 533,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "140:11:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 532,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "140:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 535,
+                "name": "coverages",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "162:16:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 534,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "162:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 537,
+                "name": "policyNumber",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "189:19:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 536,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "189:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 539,
+                "name": "owner",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "219:21:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address_payable",
+                  "typeString": "address payable"
+                },
+                "typeName": {
+                  "id": 538,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "219:15:3",
+                  "stateMutability": "payable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 541,
+                "name": "price",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "251:10:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 540,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "251:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 543,
+                "name": "commission",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "272:15:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 542,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "272:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 545,
+                "name": "active",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "298:11:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 544,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "298:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 547,
+                "name": "purchased",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "320:14:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 546,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "320:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 549,
+                "name": "renewable",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "345:14:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 548,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "345:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Policy",
+            "nodeType": "StructDefinition",
+            "scope": 604,
+            "src": "97:270:3",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "OfferPolicy.Binder",
+            "id": 561,
+            "members": [
+              {
+                "constant": false,
+                "id": 552,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 561,
+                "src": "428:7:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 551,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "428:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 554,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 561,
+                "src": "446:11:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 553,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "446:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 556,
+                "name": "price",
+                "nodeType": "VariableDeclaration",
+                "scope": 561,
+                "src": "468:10:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 555,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "468:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 558,
+                "name": "owner",
+                "nodeType": "VariableDeclaration",
+                "scope": 561,
+                "src": "489:21:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address_payable",
+                  "typeString": "address payable"
+                },
+                "typeName": {
+                  "id": 557,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "489:15:3",
+                  "stateMutability": "payable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 560,
+                "name": "available",
+                "nodeType": "VariableDeclaration",
+                "scope": 561,
+                "src": "521:14:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 559,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "521:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Binder",
+            "nodeType": "StructDefinition",
+            "scope": 604,
+            "src": "403:140:3",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "OfferPolicy.StateType",
+            "id": 567,
+            "members": [
+              {
+                "id": 562,
+                "name": "PolicyAvailable",
+                "nodeType": "EnumValue",
+                "src": "596:15:3"
+              },
+              {
+                "id": 563,
+                "name": "BinderAvailableForPolicy",
+                "nodeType": "EnumValue",
+                "src": "622:24:3"
+              },
+              {
+                "id": 564,
+                "name": "OfferPlaced",
+                "nodeType": "EnumValue",
+                "src": "657:11:3"
+              },
+              {
+                "id": 565,
+                "name": "OfferAccepted",
+                "nodeType": "EnumValue",
+                "src": "679:13:3"
+              },
+              {
+                "id": 566,
+                "name": "OfferDeclined",
+                "nodeType": "EnumValue",
+                "src": "703:13:3"
+              }
+            ],
+            "name": "StateType",
+            "nodeType": "EnumDefinition",
+            "src": "569:154:3"
+          },
+          {
+            "constant": false,
+            "id": 569,
+            "name": "InstanceOwner",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "748:28:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 568,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "748:7:3",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 571,
+            "name": "Description",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "783:25:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 570,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "783:6:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 573,
+            "name": "AskingPrice",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "815:23:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 572,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "815:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 575,
+            "name": "State",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "845:22:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_StateType_$567",
+              "typeString": "enum OfferPolicy.StateType"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 574,
+              "name": "StateType",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 567,
+              "src": "845:9:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_StateType_$567",
+                "typeString": "enum OfferPolicy.StateType"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 577,
+            "name": "InstanceBuyer",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "895:28:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 576,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "895:7:3",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 579,
+            "name": "OfferPrice",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "930:21:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_int256",
+              "typeString": "int256"
+            },
+            "typeName": {
+              "id": 578,
+              "name": "int",
+              "nodeType": "ElementaryTypeName",
+              "src": "930:3:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_int256",
+                "typeString": "int256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 582,
+            "name": "policyCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "981:27:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 580,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "981:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 581,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1007:1:3",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 586,
+            "name": "products",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "1015:39:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Policy_$550_storage_$",
+              "typeString": "mapping(uint256 => struct OfferPolicy.Policy)"
+            },
+            "typeName": {
+              "id": 585,
+              "keyType": {
+                "id": 583,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "1023:4:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1015:23:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Policy_$550_storage_$",
+                "typeString": "mapping(uint256 => struct OfferPolicy.Policy)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 584,
+                "name": "Policy",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 550,
+                "src": "1031:6:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Policy_$550_storage_ptr",
+                  "typeString": "struct OfferPolicy.Policy"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 589,
+            "name": "binderCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "1078:27:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 587,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "1078:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 588,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1104:1:3",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 593,
+            "name": "binders",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "1112:38:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Binder_$561_storage_$",
+              "typeString": "mapping(uint256 => struct OfferPolicy.Binder)"
+            },
+            "typeName": {
+              "id": 592,
+              "keyType": {
+                "id": 590,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "1120:4:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1112:23:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Binder_$561_storage_$",
+                "typeString": "mapping(uint256 => struct OfferPolicy.Binder)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 591,
+                "name": "Binder",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 561,
+                "src": "1128:6:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Binder_$561_storage_ptr",
+                  "typeString": "struct OfferPolicy.Binder"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 602,
+              "nodeType": "Block",
+              "src": "1219:31:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 600,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 598,
+                      "name": "name",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 527,
+                      "src": "1230:4:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 599,
+                      "name": "_name",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 595,
+                      "src": "1237:5:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "1230:12:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 601,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1230:12:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 603,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "generatePolicy",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 596,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 595,
+                  "name": "_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 603,
+                  "src": "1183:19:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 594,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1183:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1182:21:3"
+            },
+            "returnParameters": {
+              "id": 597,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1219:0:3"
+            },
+            "scope": 604,
+            "src": "1159:91:3",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 605,
+        "src": "27:1226:3"
+      }
+    ],
+    "src": "0:1253:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/jaxco/source/repos/BlockChain/Etherium/Marketplace/marketplace/src/contracts/OfferPolicy.sol",
+    "exportedSymbols": {
+      "OfferPolicy": [
+        604
+      ]
+    },
+    "id": 605,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 525,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 604,
+        "linearizedBaseContracts": [
+          604
+        ],
+        "name": "OfferPolicy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 527,
+            "name": "name",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "55:18:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 526,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "55:6:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 529,
+            "name": "id",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "80:7:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 528,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "80:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "OfferPolicy.Policy",
+            "id": 550,
+            "members": [
+              {
+                "constant": false,
+                "id": 531,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "122:7:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 530,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "122:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 533,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "140:11:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 532,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "140:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 535,
+                "name": "coverages",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "162:16:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 534,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "162:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 537,
+                "name": "policyNumber",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "189:19:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 536,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "189:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 539,
+                "name": "owner",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "219:21:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address_payable",
+                  "typeString": "address payable"
+                },
+                "typeName": {
+                  "id": 538,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "219:15:3",
+                  "stateMutability": "payable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 541,
+                "name": "price",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "251:10:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 540,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "251:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 543,
+                "name": "commission",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "272:15:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 542,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "272:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 545,
+                "name": "active",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "298:11:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 544,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "298:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 547,
+                "name": "purchased",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "320:14:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 546,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "320:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 549,
+                "name": "renewable",
+                "nodeType": "VariableDeclaration",
+                "scope": 550,
+                "src": "345:14:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 548,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "345:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Policy",
+            "nodeType": "StructDefinition",
+            "scope": 604,
+            "src": "97:270:3",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "OfferPolicy.Binder",
+            "id": 561,
+            "members": [
+              {
+                "constant": false,
+                "id": 552,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 561,
+                "src": "428:7:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 551,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "428:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 554,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 561,
+                "src": "446:11:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 553,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "446:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 556,
+                "name": "price",
+                "nodeType": "VariableDeclaration",
+                "scope": 561,
+                "src": "468:10:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 555,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "468:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 558,
+                "name": "owner",
+                "nodeType": "VariableDeclaration",
+                "scope": 561,
+                "src": "489:21:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address_payable",
+                  "typeString": "address payable"
+                },
+                "typeName": {
+                  "id": 557,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "489:15:3",
+                  "stateMutability": "payable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 560,
+                "name": "available",
+                "nodeType": "VariableDeclaration",
+                "scope": 561,
+                "src": "521:14:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 559,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "521:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Binder",
+            "nodeType": "StructDefinition",
+            "scope": 604,
+            "src": "403:140:3",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "OfferPolicy.StateType",
+            "id": 567,
+            "members": [
+              {
+                "id": 562,
+                "name": "PolicyAvailable",
+                "nodeType": "EnumValue",
+                "src": "596:15:3"
+              },
+              {
+                "id": 563,
+                "name": "BinderAvailableForPolicy",
+                "nodeType": "EnumValue",
+                "src": "622:24:3"
+              },
+              {
+                "id": 564,
+                "name": "OfferPlaced",
+                "nodeType": "EnumValue",
+                "src": "657:11:3"
+              },
+              {
+                "id": 565,
+                "name": "OfferAccepted",
+                "nodeType": "EnumValue",
+                "src": "679:13:3"
+              },
+              {
+                "id": 566,
+                "name": "OfferDeclined",
+                "nodeType": "EnumValue",
+                "src": "703:13:3"
+              }
+            ],
+            "name": "StateType",
+            "nodeType": "EnumDefinition",
+            "src": "569:154:3"
+          },
+          {
+            "constant": false,
+            "id": 569,
+            "name": "InstanceOwner",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "748:28:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 568,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "748:7:3",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 571,
+            "name": "Description",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "783:25:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 570,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "783:6:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 573,
+            "name": "AskingPrice",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "815:23:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 572,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "815:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 575,
+            "name": "State",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "845:22:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_StateType_$567",
+              "typeString": "enum OfferPolicy.StateType"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 574,
+              "name": "StateType",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 567,
+              "src": "845:9:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_StateType_$567",
+                "typeString": "enum OfferPolicy.StateType"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 577,
+            "name": "InstanceBuyer",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "895:28:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 576,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "895:7:3",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 579,
+            "name": "OfferPrice",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "930:21:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_int256",
+              "typeString": "int256"
+            },
+            "typeName": {
+              "id": 578,
+              "name": "int",
+              "nodeType": "ElementaryTypeName",
+              "src": "930:3:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_int256",
+                "typeString": "int256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 582,
+            "name": "policyCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "981:27:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 580,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "981:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 581,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1007:1:3",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 586,
+            "name": "products",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "1015:39:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Policy_$550_storage_$",
+              "typeString": "mapping(uint256 => struct OfferPolicy.Policy)"
+            },
+            "typeName": {
+              "id": 585,
+              "keyType": {
+                "id": 583,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "1023:4:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1015:23:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Policy_$550_storage_$",
+                "typeString": "mapping(uint256 => struct OfferPolicy.Policy)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 584,
+                "name": "Policy",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 550,
+                "src": "1031:6:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Policy_$550_storage_ptr",
+                  "typeString": "struct OfferPolicy.Policy"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 589,
+            "name": "binderCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "1078:27:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 587,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "1078:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 588,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1104:1:3",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 593,
+            "name": "binders",
+            "nodeType": "VariableDeclaration",
+            "scope": 604,
+            "src": "1112:38:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Binder_$561_storage_$",
+              "typeString": "mapping(uint256 => struct OfferPolicy.Binder)"
+            },
+            "typeName": {
+              "id": 592,
+              "keyType": {
+                "id": 590,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "1120:4:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1112:23:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Binder_$561_storage_$",
+                "typeString": "mapping(uint256 => struct OfferPolicy.Binder)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 591,
+                "name": "Binder",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 561,
+                "src": "1128:6:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Binder_$561_storage_ptr",
+                  "typeString": "struct OfferPolicy.Binder"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 602,
+              "nodeType": "Block",
+              "src": "1219:31:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 600,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 598,
+                      "name": "name",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 527,
+                      "src": "1230:4:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 599,
+                      "name": "_name",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 595,
+                      "src": "1237:5:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "1230:12:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 601,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1230:12:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 603,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "generatePolicy",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 596,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 595,
+                  "name": "_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 603,
+                  "src": "1183:19:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 594,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1183:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1182:21:3"
+            },
+            "returnParameters": {
+              "id": 597,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1219:0:3"
+            },
+            "scope": 604,
+            "src": "1159:91:3",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 605,
+        "src": "27:1226:3"
+      }
+    ],
+    "src": "0:1253:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.16",
+  "updatedAt": "2020-01-12T18:32:17.911Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -5,7 +5,7 @@ pragma solidity ^0.5.0;
 //     uint public biddingEnd;
 //     uint public revealEnd;
 //     bool public ended;
-    
+
 //     mapping(address => Bid[]) public bids;
 
 
@@ -20,7 +20,7 @@ pragma solidity ^0.5.0;
 //     struct Bid {
 //         bytes32 blindedBid;
 //         uint deposit;
-//     }    
+//     }
 
 //     /// Modifiers are a convenient way to validate inputs to
 //     /// functions. `onlyBefore` is applied to `bid` below:
