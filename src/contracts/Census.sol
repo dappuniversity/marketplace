@@ -59,7 +59,7 @@ contract Census {
         // Increment product count
         personCount ++;
         // Create the product
-        persons[personCount] = Person(personCCount, _name, _photourl, _role, _race, _country, _householdID, _alive);
+        persons[personCount] = Person(personCount, _name, _photourl, _role, _race, _country, _householdID, _alive);
         // Trigger an event
         //emit ProductCreated(productCount, _Persons, _race, _country);
     }
