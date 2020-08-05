@@ -34,24 +34,24 @@ class App extends Component {
     const accounts = await web3.eth.getAccounts()
     this.setState({ account: accounts[0] })
     const networkId = await web3.eth.net.getId()
-    const networkData = Marketplace.networks[networkId]
+    const networkData = Census.networks[networkId]
     if(networkData) {
-      const marketplace = web3.eth.Contract(Marketplace.abi, networkData.address)
+      const marketplace = web3.eth.Contract(Census.abi, networkData.address)
       this.setState({ marketplace })
-      console.log(marketplace.methods)
+    
       //window.alert(marketplace.methods)
-      //const personCount = await marketplace.methods.personCount().call()
-      const hID = await marketplace.methods.getlasthouseholdID().call()
-//      this.setState({ personCount })
-      this.setState({ hID })
-//      window.alert(householdID)
+      const personCount = await marketplace.methods.personCount().call()
+      const householdID = await marketplace.methods.getlasthouseholdID().call()
+      this.setState({ personCount })
+      this.setState({ householdID })
+      window.alert(householdID)
       // Load products
-//      for (var i = 1; i <= personCount; i++) {
-//        const product = await marketplace.methods.products(i).call()
-//        this.setState({
- //         products: [...this.state.products, product]
- //       })
-  //    }
+      for (var i = 1; i <= personCount; i++) {
+        const product = await marketplace.methods.products(i).call()
+       this.setState({
+          products: [...this.state.products, product]
+        })
+      }
       this.setState({ loading: false})
     } else {
       window.alert('Marketplace contract not deployed to detected network.')
