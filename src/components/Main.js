@@ -29,7 +29,7 @@ class Main extends Component {
               type="text"
               ref={(input) => { this.productName = input }}
               className="form-control"
-              placeholder="Name"
+              placeholder="Name (optional)"
               />
           </div>
           <div className="form-group mr-sm-2">
