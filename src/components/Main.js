@@ -43,7 +43,7 @@ class Main extends Component {
           </div>
           <div className="form-group mr-sm-2">
             <input
-              id="productRace"
+              id="photo"
               type="file"
               ref={(input) => { this.productPhoto = input }}
               className="form-control"
