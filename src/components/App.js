@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Web3 from 'web3'
 import logo from '../logo.png';
 import './App.css';
-import Marketplace from '../abis/Marketplace.json'
+import Census from '../abis/Census.json'
 import Navbar from './Navbar'
 import Main from './Main'
 import fleek from '@fleekhq/fleek-storage-js'
@@ -40,18 +40,18 @@ class App extends Component {
       this.setState({ marketplace })
       console.log(marketplace.methods)
       //window.alert(marketplace.methods)
-      const personCount = await marketplace.methods.personCount().call()
-      const householdID =  marketplace.methods.lasthouseholdID()
-      this.setState({ personCount })
-//      this.setState({ householdID })
+      //const personCount = await marketplace.methods.personCount().call()
+      const hID = await marketplace.methods.getlasthouseholdID().call()
+//      this.setState({ personCount })
+      this.setState({ hID })
 //      window.alert(householdID)
       // Load products
-      for (var i = 1; i <= personCount; i++) {
-        const product = await marketplace.methods.products(i).call()
-        this.setState({
-          products: [...this.state.products, product]
-        })
-      }
+//      for (var i = 1; i <= personCount; i++) {
+//        const product = await marketplace.methods.products(i).call()
+//        this.setState({
+ //         products: [...this.state.products, product]
+ //       })
+  //    }
       this.setState({ loading: false})
     } else {
       window.alert('Marketplace contract not deployed to detected network.')
