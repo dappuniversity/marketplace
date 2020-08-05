@@ -41,9 +41,11 @@ class App extends Component {
     
       //window.alert(marketplace.methods)
       const personCount = await marketplace.methods.personCount().call()
-      const householdID = await marketplace.methods.getlasthouseholdID().call()
+      const householdID = await marketplace.methods.lasthouseholdID().call()
+      var households = await marketplace.methods.households()
       this.setState({ personCount })
       this.setState({ householdID })
+      this.setState({ households })
       window.alert(householdID)
       // Load products
       for (var i = 1; i <= personCount; i++) {
@@ -74,20 +76,26 @@ class App extends Component {
   createProduct(name, race, photo, role, country, alive) {
     this.setState({ loading: true })
 
-    var photurl = fleek.upload({
+    var phot = fleek.upload({
       apiKey: '1Rc+ytXp/AlF3LseOVgk7Q==',
         apiSecret: 'my-6sd3b5ZQCfUT++Aym8kSe6AtpD3w0QtQxQ3NBr8mgbg=',
         key: 'my-file-key',
         data: photo,
       });
+      window.alert (typeof(phot.publicUrl));
 
 
-    this.state.marketplace.methods.createPerson(name, race, photurl, role, country, this.householdID, alive).send({ from: this.state.account })
+
+    // this.state.marketplace.methods.createPerson(name, race, photurl, role, country, alive, this.householdID).send({ from: this.state.account })
+    // .once('receipt', (receipt) => {
+    //   this.setState({ loading: false })
+    // })
+    this.state.marketplace.methods.addmember(name, race, phot, role, country, alive, this.householdID).send({ from: this.state.account })
     .once('receipt', (receipt) => {
       this.setState({ loading: false })
-    })
-  }
-
+  })
+}
+  
 
 
 
