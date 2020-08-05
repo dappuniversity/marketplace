@@ -59,7 +59,7 @@ class Main extends Component {
               className="form-control"
               placeholder="Product Price"
                />
-              It is death proof photo
+              It is a death proof photo
           </div>
           <div className="form-group mr-sm-2">
             <input
@@ -98,7 +98,7 @@ class Main extends Component {
               <label for="kid">kids</label><br></br>
           </div>
 
-          <button type="submit" className="btn btn-primary">Add Product</button>
+          <button type="submit" className="btn btn-primary">Add family member</button>
         </form>
         <p>&nbsp;</p>
         <h2>Buy Product</h2>
