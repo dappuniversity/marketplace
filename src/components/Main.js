@@ -25,12 +25,12 @@ class Main extends Component {
           </div>
           <div className="form-group mr-sm-2">
             <input
-              id="productName"
+              id="Name"
               type="text"
               ref={(input) => { this.productName = input }}
               className="form-control"
-              placeholder="Product Name"
-              required />
+              placeholder="Name"
+              />
           </div>
           <div className="form-group mr-sm-2">
             <input
