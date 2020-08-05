@@ -38,7 +38,7 @@ class Main extends Component {
               type="text"
               ref={(input) => { this.productRace = input }}
               className="form-control"
-              placeholder="Product Price"
+              placeholder="race"
               required />
           </div>
           <div className="form-group mr-sm-2">
@@ -58,7 +58,7 @@ class Main extends Component {
               ref={(input) => { this.dead = input }}
               className="form-control"
               placeholder="Product Price"
-              required />
+               />
               It is death proof photo
           </div>
           <div className="form-group mr-sm-2">
@@ -95,7 +95,7 @@ class Main extends Component {
               value="kid"
               placeholder="Product Price"
               required />
-              <label for="kid">spouse with photo</label><br></br>
+              <label for="kid">kids</label><br></br>
           </div>
 
           <button type="submit" className="btn btn-primary">Add Product</button>
