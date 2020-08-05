@@ -20,7 +20,7 @@ contract Census {
         bool alive;
     }
 
-   bool[] public HouseholdPaid;
+   bool[] public Householdadded;
 
 
 
@@ -31,10 +31,9 @@ contract Census {
     function createPerson(string memory _name, string memory _race, string memory _photourl,string memory _role, string memory _country, bool _alive, uint _householdID) public payable {
         // Require a valid name
         require(bytes(_photourl).length > 0);
-        if (!HouseholdPaid[_householdID]){
-        //require(msg.value >= 20000000);
-        //       address(owner).transfer(msg.value);
-           HouseholdPaid[_householdID] = true ;
+        if (!Householdadded[_householdID]){
+    
+           Householdadded[_householdID] = true ;
         lasthouseholdID ++;
          }
         
