@@ -3,7 +3,7 @@ pragma solidity ^0.5.16;
 contract Census {
     address payable owner = 0x8493e8809a45A5aF760dD66F96C86f4aBF62a65C ;
     string public name;
-    uint public productCount = 0;
+    uint public personCount = 0;
     uint public lasthouseholdID = 0;
     mapping(uint => Household) public households;
     mapping(uint => Person) public persons;
@@ -55,12 +55,11 @@ contract Census {
  HouseholdPaid[_householdID] = true ;
  lasthouseholdID ++;
  }
-                // Pay the seller by sending them Ether
         
         // Increment product count
-        productCount ++;
+        personCount ++;
         // Create the product
-        persons[productCount] = Person(productCount, _name, _photourl, _role, _race, _country, _householdID, _alive);
+        persons[personCount] = Person(personCCount, _name, _photourl, _role, _race, _country, _householdID, _alive);
         // Trigger an event
         //emit ProductCreated(productCount, _Persons, _race, _country);
     }

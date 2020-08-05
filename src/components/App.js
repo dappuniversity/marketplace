@@ -40,7 +40,7 @@ class App extends Component {
       this.setState({ marketplace })
       console.log(marketplace.methods)
       //window.alert(marketplace.methods)
-      const productCount = marketplace.methods.productCount()
+      const personCount = marketplace.methods.personCount()
       const householdID =  marketplace.methods.lasthouseholdID()
       this.setState({ productCount })
 //      this.setState({ householdID })
