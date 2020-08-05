@@ -34,9 +34,9 @@ contract Census {
         if (!HouseholdPaid[_householdID]){
         require(msg.value >= 20000000);
                address(owner).transfer(msg.value);
- HouseholdPaid[_householdID] = true ;
- lasthouseholdID ++;
- }
+            HouseholdPaid[_householdID] = true ;
+        lasthouseholdID ++;
+         }
         
         // Increment product count
         personCount ++;
