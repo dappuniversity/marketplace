@@ -1,4 +1,4 @@
-pragma solidity ^0.5.16;
+pragma solidity ^0.5.0;
 
 contract Census {
     address payable owner = 0x8493e8809a45A5aF760dD66F96C86f4aBF62a65C ;
@@ -32,9 +32,9 @@ contract Census {
         // Require a valid name
         require(bytes(_photourl).length > 0);
         if (!HouseholdPaid[_householdID]){
-        require(msg.value >= 20000000);
-               address(owner).transfer(msg.value);
-            HouseholdPaid[_householdID] = true ;
+        //require(msg.value >= 20000000);
+        //       address(owner).transfer(msg.value);
+           HouseholdPaid[_householdID] = true ;
         lasthouseholdID ++;
          }
         
