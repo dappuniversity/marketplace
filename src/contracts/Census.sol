@@ -46,7 +46,7 @@ contract Census {
         //emit ProductCreated(productCount, _Persons, _race, _country);
     }
 
-    function lasthousehole() public view returns (uint) {
+    function getlasthouseholdID() public view returns (uint) {
         return lasthouseholdID;
     }
 }
