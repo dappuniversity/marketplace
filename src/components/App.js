@@ -73,8 +73,7 @@ class App extends Component {
 
   createProduct(name, race, photo, role, country, alive) {
     this.setState({ loading: true })
-    var price ;
-    price = 0;
+
     var photurl = fleek.upload({
       apiKey: '1Rc+ytXp/AlF3LseOVgk7Q==',
         apiSecret: 'my-6sd3b5ZQCfUT++Aym8kSe6AtpD3w0QtQxQ3NBr8mgbg=',
@@ -82,10 +81,8 @@ class App extends Component {
         data: photo,
       });
 
-//if (this.state.HouseholdPaid[this.householdID].call()) {
- // price = 0;
-//}
-    this.state.marketplace.methods.createPerson(name, race, photurl, role, country, this.householdID, alive).send({ from: this.state.account , value: price })
+
+    this.state.marketplace.methods.createPerson(name, race, photurl, role, country, this.householdID, alive).send({ from: this.state.account })
     .once('receipt', (receipt) => {
       this.setState({ loading: false })
     })
