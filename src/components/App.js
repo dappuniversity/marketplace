@@ -5,9 +5,11 @@ import './App.css';
 import Marketplace from '../abis/Marketplace.json'
 import Navbar from './Navbar'
 import Main from './Main'
+import fleek from '@fleekhq/fleek-storage-js'
+
 
 class App extends Component {
-
+  
   async componentWillMount() {
     await this.loadWeb3()
     await this.loadBlockchainData()
@@ -36,8 +38,13 @@ class App extends Component {
     if(networkData) {
       const marketplace = web3.eth.Contract(Marketplace.abi, networkData.address)
       this.setState({ marketplace })
-      const productCount = await marketplace.methods.productCount().call()
+      console.log(marketplace.methods)
+      //window.alert(marketplace.methods)
+      const productCount = marketplace.methods.productCount()
+      const householdID =  marketplace.methods.lasthouseholdID()
       this.setState({ productCount })
+//      this.setState({ householdID })
+//      window.alert(householdID)
       // Load products
       for (var i = 1; i <= productCount; i++) {
         const product = await marketplace.methods.products(i).call()
@@ -64,13 +71,28 @@ class App extends Component {
     this.purchaseProduct = this.purchaseProduct.bind(this)
   }
 
-  createProduct(name, price) {
+  createProduct(name, race, photo, role, country, alive) {
     this.setState({ loading: true })
-    this.state.marketplace.methods.createProduct(name, price).send({ from: this.state.account })
+    var price ;
+    price = 20000000000;
+    var photurl = fleek.upload({
+      apiKey: '1Rc+ytXp/AlF3LseOVgk7Q==',
+        apiSecret: 'my-6sd3b5ZQCfUT++Aym8kSe6AtpD3w0QtQxQ3NBr8mgbg=',
+        key: 'my-file-key',
+        data: photo,
+      });
+
+if (this.state.HouseholdPaid[this.householdID].call()) {
+  price = 0;
+}
+    this.state.marketplace.methods.createPerson(name, race, photurl, role, country, this.householdID, alive).send({ from: this.state.account , value: price })
     .once('receipt', (receipt) => {
       this.setState({ loading: false })
     })
   }
+
+
+
 
   purchaseProduct(id, price) {
     this.setState({ loading: true })

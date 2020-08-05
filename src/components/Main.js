@@ -9,9 +9,20 @@ class Main extends Component {
         <form onSubmit={(event) => {
           event.preventDefault()
           const name = this.productName.value
-          const price = window.web3.utils.toWei(this.productPrice.value.toString(), 'Ether')
-          this.props.createProduct(name, price)
+          const race = this.productRace.value
+          const photo =this.productPhoto
+          const role = this.role
+          this.props.createProduct(name, race, photo, role, this.country, this.dead)
         }}>
+           <div className="form-group mr-sm-2">
+            <input
+              id="country"
+              type="text"
+              ref={(input) => { this.country = input }}
+              className="form-control"
+              placeholder="country"
+              required />
+          </div>
           <div className="form-group mr-sm-2">
             <input
               id="productName"
@@ -23,13 +34,70 @@ class Main extends Component {
           </div>
           <div className="form-group mr-sm-2">
             <input
-              id="productPrice"
+              id="productRace"
               type="text"
-              ref={(input) => { this.productPrice = input }}
+              ref={(input) => { this.productRace = input }}
               className="form-control"
               placeholder="Product Price"
               required />
           </div>
+          <div className="form-group mr-sm-2">
+            <input
+              id="productRace"
+              type="file"
+              ref={(input) => { this.productPhoto = input }}
+              className="form-control"
+              placeholder="Prodphotouct "
+              required />
+              
+          </div>
+          <div className="form-group mr-sm-2">
+            <input
+              id="dead"
+              type="checkbox"
+              ref={(input) => { this.dead = input }}
+              className="form-control"
+              placeholder="Product Price"
+              required />
+              It is death proof photo
+          </div>
+          <div className="form-group mr-sm-2">
+            <input
+              id="pspouse"
+              name="role"
+              type="radio"
+              ref={(input) => { this.role = input }}
+              className="form-control"
+              value="pspouse"
+              placeholder="Product Price"
+              required />
+              <label for="pspouse">spouse with photo</label><br></br>
+          </div>
+          <div className="form-group mr-sm-2">
+            <input
+              id="spouse2"
+              name="role"
+              type="radio"
+              ref={(input) => { this.productRace = input }}
+              className="form-control"
+              value="spouse2"
+              placeholder="Product Price"
+              required />
+              <label for="spouse2">spouse 2</label><br></br>
+          </div>
+          <div className="form-group mr-sm-2">
+            <input
+              id="kid"
+              name="role"
+              type="radio"
+              ref={(input) => { this.productRace = input }}
+              className="form-control"
+              value="kid"
+              placeholder="Product Price"
+              required />
+              <label for="kid">spouse with photo</label><br></br>
+          </div>
+
           <button type="submit" className="btn btn-primary">Add Product</button>
         </form>
         <p>&nbsp;</p>
