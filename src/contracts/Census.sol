@@ -4,6 +4,7 @@ contract Census {
     string public name;
     uint public personCount = 0;
     uint public lasthouseholdID = 0;
+    uint public member;
 
     mapping(uint => Person) public persons;
     mapping(uint => Household) public households;
@@ -53,7 +54,7 @@ contract Census {
     // }
         function addmember(string memory _name, string memory _race, string memory _photourl,string memory _role, string memory _country, bool _alive, uint _householdID) public {
         // Require a valid photo
-        uint member;
+        
         require(bytes(_photourl).length > 0);
         
         if (!Householdadded[_householdID]){

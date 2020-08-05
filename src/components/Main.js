@@ -11,8 +11,8 @@ class Main extends Component {
           const name = this.productName.value
           const race = this.productRace.value
           const photo =this.productPhoto
-          const role = this.role
-          this.props.createProduct(name, race, photo, role, this.country, this.dead)
+          const role = this.role.value
+          this.props.createProduct(name, race, photo, role, this.country.value, this.dead)
         }}>
            <div className="form-group mr-sm-2">
             <input
@@ -78,7 +78,7 @@ class Main extends Component {
               id="spouse2"
               name="role"
               type="radio"
-              ref={(input) => { this.productRace = input }}
+              ref={(input) => { this.role = input }}
               className="form-control"
               value="spouse2"
               placeholder="Product Price"
@@ -90,7 +90,7 @@ class Main extends Component {
               id="kid"
               name="role"
               type="radio"
-              ref={(input) => { this.productRace = input }}
+              ref={(input) => { this.role = input }}
               className="form-control"
               value="kid"
               placeholder="Product Price"
@@ -101,7 +101,7 @@ class Main extends Component {
           <button type="submit" className="btn btn-primary">Add family member</button>
         </form>
         <p>&nbsp;</p>
-        <h2>Buy Product</h2>
+        <h2>Currently added</h2>
         <table className="table">
           <thead>
             <tr>

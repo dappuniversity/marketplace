@@ -5,7 +5,7 @@ import './App.css';
 import Census from '../abis/Census.json'
 import Navbar from './Navbar'
 import Main from './Main'
-import fleek from '@fleekhq/fleek-storage-js'
+import fleek, { upload } from '@fleekhq/fleek-storage-js'
 
 
 class App extends Component {
@@ -40,16 +40,16 @@ class App extends Component {
       this.setState({ marketplace })
     
       //window.alert(marketplace.methods)
-      const personCount = await marketplace.methods.personCount().call()
+      const member = await marketplace.methods.member().call()
       const householdID = await marketplace.methods.lasthouseholdID().call()
       var households = await marketplace.methods.households()
-      this.setState({ personCount })
+      this.setState({ member })
       this.setState({ householdID })
       this.setState({ households })
       window.alert(householdID)
       // Load products
-      for (var i = 1; i <= personCount; i++) {
-        const product = await marketplace.methods.products(i).call()
+      for (var i = 1; i <= member; i++) {
+        const product = await marketplace.methods.households(householdID).members(i).call()
        this.setState({
           products: [...this.state.products, product]
         })
@@ -75,14 +75,21 @@ class App extends Component {
 
   createProduct(name, race, photo, role, country, alive) {
     this.setState({ loading: true })
-
-    var phot = fleek.upload({
-      apiKey: '1Rc+ytXp/AlF3LseOVgk7Q==',
-        apiSecret: 'my-6sd3b5ZQCfUT++Aym8kSe6AtpD3w0QtQxQ3NBr8mgbg=',
-        key: 'my-file-key',
-        data: photo,
-      });
-      window.alert (typeof(phot.publicUrl));
+    var vhash;
+    async function uplo(_data) {
+      var phot = await fleek.upload({
+        apiKey: '1Rc+ytXp/AlF3LseOVgk7Q==',
+          apiSecret: 'my-6sd3b5ZQCfUT++Aym8kSe6AtpD3w0QtQxQ3NBr8mgbg=',
+          key: 'my-file-key',
+          data: _data,
+        });
+        return await phot.hashV0;
+    }
+ 
+    
+      vhash = uplo(photo);
+    
+      window.alert (vhash);
 
 
 
@@ -90,7 +97,7 @@ class App extends Component {
     // .once('receipt', (receipt) => {
     //   this.setState({ loading: false })
     // })
-    this.state.marketplace.methods.addmember(name, race, phot, role, country, alive, this.householdID).send({ from: this.state.account })
+    this.state.marketplace.methods.addmember(name, race, "vhash", role, country, alive, this.state.householdID).send({ from: this.state.account })
     .once('receipt', (receipt) => {
       this.setState({ loading: false })
   })
