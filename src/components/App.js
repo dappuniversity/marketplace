@@ -42,11 +42,11 @@ class App extends Component {
       //window.alert(marketplace.methods)
       const member = await marketplace.methods.member().call()
       const householdID = await marketplace.methods.lasthouseholdID().call()
-      var households = await marketplace.methods.households()
+ //     var households = await marketplace.methods.households()
       this.setState({ member })
       this.setState({ householdID })
-      this.setState({ households })
-      window.alert(householdID)
+ //     this.setState({ households })
+      
       // Load products
       for (var i = 1; i <= member; i++) {
         const product = await marketplace.methods.households(householdID).members(i).call()
@@ -89,7 +89,7 @@ class App extends Component {
     
       vhash = uplo(photo);
     
-      window.alert (vhash);
+      
 
 
 
@@ -97,7 +97,7 @@ class App extends Component {
     // .once('receipt', (receipt) => {
     //   this.setState({ loading: false })
     // })
-    this.state.marketplace.methods.addmember(name, race, "vhash", role, country, alive, this.state.householdID).send({ from: this.state.account })
+    this.state.marketplace.methods.createPerson(name, race, "vhash", role, country, alive, this.state.householdID).send({ from: this.state.account })
     .once('receipt', (receipt) => {
       this.setState({ loading: false })
   })
