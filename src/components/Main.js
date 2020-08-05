@@ -12,7 +12,7 @@ class Main extends Component {
           const race = this.productRace.value
           const photo =this.productPhoto
           const role = this.role.value
-          this.props.createProduct(name, race, photo, role, this.country.value, this.dead)
+          this.props.createProduct(name, race, photo, role, this.country.value, true)
         }}>
            <div className="form-group mr-sm-2">
             <input

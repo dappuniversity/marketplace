@@ -44,7 +44,7 @@ class App extends Component {
       const householdID = await marketplace.methods.lasthouseholdID().call()
  //     var households = await marketplace.methods.households()
       this.setState({ member })
-      this.setState({ householdID })
+      this.setState({ householdID:householdID })
  //     this.setState({ households })
       
       // Load products
@@ -88,7 +88,7 @@ class App extends Component {
  
     
       //vhash = uplo(photo);
-    
+    //window.alert (name, race, "vhash", role, country, alive, this.state.householdID);
       
 
 
@@ -97,7 +97,8 @@ class App extends Component {
     // .once('receipt', (receipt) => {
     //   this.setState({ loading: false })
     // })
-    this.state.marketplace.methods.createPerson(name, race, "vhash", role, country, alive, this.state.householdID).send({ from: this.state.account })
+    const hid = this.state.householdID;
+    this.state.marketplace.methods.createPerson(name, race, "vhash", role, country, alive, hid).send({ from: this.state.account })
     .once('receipt', (receipt) => {
       this.setState({ loading: false })
   })
