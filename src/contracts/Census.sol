@@ -1,7 +1,6 @@
 pragma solidity ^0.5.0;
 
 contract Census {
-    address payable owner = 0x8493e8809a45A5aF760dD66F96C86f4aBF62a65C ;
     string public name;
     uint public personCount = 0;
     uint public lasthouseholdID = 0;
@@ -28,7 +27,7 @@ contract Census {
         name = "DCensus";
     }
 
-    function createPerson(string memory _name, string memory _race, string memory _photourl,string memory _role, string memory _country, bool _alive, uint _householdID) public payable {
+    function createPerson(string memory _name, string memory _race, string memory _photourl,string memory _role, string memory _country, bool _alive, uint _householdID) public {
         // Require a valid name
         require(bytes(_photourl).length > 0);
         if (!Householdadded[_householdID]){
