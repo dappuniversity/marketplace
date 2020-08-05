@@ -19,28 +19,10 @@ contract Census {
         uint householdID;
         bool alive;
     }
-    struct Household {
-        uint id;
-  //      Person[] Persons;
-        string race;
-        string country;
-   }
+
    bool[] public HouseholdPaid;
 
-    event ProductCreated(
-      uint id,
- //       Person[] Persons,
-        string race,
-        string country
-    );
 
-    event ProductPurchased(
-        uint id,
-        string name,
-        uint price,
-        address payable owner,
-        bool purchased
-    );
 
     constructor() public {
         name = "DCensus";
