@@ -87,7 +87,7 @@ class App extends Component {
     }
  
     
-      vhash = uplo(photo);
+      //vhash = uplo(photo);
     
       
 
