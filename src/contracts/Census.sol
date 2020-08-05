@@ -5,7 +5,7 @@ contract Census {
     string public name;
     uint public personCount = 0;
     uint public lasthouseholdID = 0;
-    mapping(uint => Household) public households;
+
     mapping(uint => Person) public persons;
 
     struct Person {

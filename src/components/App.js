@@ -42,11 +42,11 @@ class App extends Component {
       //window.alert(marketplace.methods)
       const personCount = marketplace.methods.personCount()
       const householdID =  marketplace.methods.lasthouseholdID()
-      this.setState({ productCount })
+      this.setState({ personCount })
 //      this.setState({ householdID })
 //      window.alert(householdID)
       // Load products
-      for (var i = 1; i <= productCount; i++) {
+      for (var i = 1; i <= personCount; i++) {
         const product = await marketplace.methods.products(i).call()
         this.setState({
           products: [...this.state.products, product]
