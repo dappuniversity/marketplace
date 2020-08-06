@@ -63,7 +63,7 @@ contract Census {
            Householdadded[_householdID] = true ;
         lasthouseholdID ++;
         
-        //  }
+          }
      
         // Increment product count
         personCount ++;
