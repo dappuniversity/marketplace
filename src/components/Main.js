@@ -117,12 +117,12 @@ class Main extends Component {
             { this.props.products.map((product, key) => {
               return(
                 <tr key={key}>
-                  <th scope="row">{product.id.toString()}</th>
-                  <td>{product.name}</td>
-                  <td>{product.race} Eth</td>
-                  <td>{product.owner}</td>
+                  <th scope="row">{/* product.id.toString() */}</th>
+                  <td>{product.name}in</td>
+                  {/* <td>{product.race} Eth</td>
+                  <td>{product.owner}</td> */}
                   <td>
-                    { !product.purchased
+                    {/* { !product.purchased
                       ? <button
                           name={product.id}
                           value={product.price}
@@ -133,7 +133,7 @@ class Main extends Component {
                           Buy
                         </button>
                       : null
-                    }
+                    } */}
                     </td>
                 </tr>
               )

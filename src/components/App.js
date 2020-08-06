@@ -41,17 +41,17 @@ class App extends Component {
     
       //window.alert(marketplace.methods)
       
-      const householdID = await marketplace.methods.lasthouseholdID().call()
+      const householdID = await marketplace.methods.gethousholdID().call()
       var member = await marketplace.methods.getmemberslenght(householdID).call()
 
  //     var households = await marketplace.methods.households()
       // this.setState({ member })
       this.setState({ householdID })
- //     this.setState({ households })
+      this.setState({ member })
       
       // Load products
-       for (var i = 1; i < member; i++) {
-        const product = await marketplace.methods.households(0).members(i).call()
+       for (var i = 1; i <= member; i++) {
+        const product = await marketplace.methods.getfamilymember(0,i-1).call()
        this.setState({
           products: [...this.state.products, product]
         })
