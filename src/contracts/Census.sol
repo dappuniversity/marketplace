@@ -50,7 +50,7 @@ contract Census {
         personCount ++;
         // Create the product
         persons[personCount] = Person(personCount, _name, _photourl, _role, _race, _country, _householdID, _alive);
-       // households[_householdID].me = 
+    //    households[_householdID].members.push = 
         // Trigger an event
         //emit ProductCreated(productCount, _Persons, _race, _country);
     }
@@ -74,6 +74,9 @@ contract Census {
         
         // Trigger an event
         //emit ProductCreated(productCount, _Persons, _race, _country);
+    }
+    function getmemberslenght(uint _householdID) view public returns (uint) {
+        return households[_householdID].members.length;
     }
 
 
