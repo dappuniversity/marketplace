@@ -40,20 +40,22 @@ class App extends Component {
       this.setState({ marketplace })
     
       //window.alert(marketplace.methods)
-      const member = await marketplace.methods.member().call()
+      
       const householdID = await marketplace.methods.lasthouseholdID().call()
+      var member = await marketplace.methods.households(householdID).members.lenght;
+      
  //     var households = await marketplace.methods.households()
-      this.setState({ member })
+      // this.setState({ member })
       this.setState({ householdID:householdID })
  //     this.setState({ households })
       
       // Load products
-      for (var i = 1; i <= member; i++) {
+  /*     for (var i = 1; i <= member; i++) {
         const product = await marketplace.methods.households(householdID).members(i).call()
        this.setState({
           products: [...this.state.products, product]
         })
-      }
+      } */
       this.setState({ loading: false})
     } else {
       window.alert('Marketplace contract not deployed to detected network.')
@@ -98,7 +100,7 @@ class App extends Component {
     //   this.setState({ loading: false })
     // })
     const hid = this.state.householdID;
-    this.state.marketplace.methods.addmember(name, race, "vhash", role, country, alive, 1).send({ from: this.state.account })
+    this.state.marketplace.methods.addmember(name, race, "vhash", role, country, alive, hid).send({ from: this.state.account })
     .once('receipt', (receipt) => {
       this.setState({ loading: false })
   })
