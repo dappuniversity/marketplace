@@ -99,7 +99,7 @@ class Main extends Component {
           </div>
 
           <button type="submit" className="btn btn-primary">Add family member</button>
-          <button type="submit" className="btn btn-primary" >submit family</button>
+          <button type="submit" className="btn btn-primary" onSubmit={this.props.familysubmit()}>submit family</button>
         </form>
         <p>&nbsp;</p>
         <h2>Currently added</h2>

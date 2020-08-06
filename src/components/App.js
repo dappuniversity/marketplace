@@ -40,8 +40,8 @@ class App extends Component {
       this.setState({ marketplace })
     
       //window.alert(marketplace.methods)
-      
-      const householdID = await marketplace.methods.gethousholdID().call()
+      var householdID = 0
+      householdID = await marketplace.methods.gethousholdID().call()
       var member = await marketplace.methods.getmemberslenght(householdID).call()
 
  //     var households = await marketplace.methods.households()
@@ -72,7 +72,7 @@ class App extends Component {
     }
 
     this.createProduct = this.createProduct.bind(this)
-    this.purchaseProduct = this.purchaseProduct.bind(this)
+    this.familysubmit = this.familysubmit.bind(this)
   }
 
   createProduct(name, race, photo, role, country, alive) {
@@ -109,14 +109,13 @@ class App extends Component {
 
 
 
-  purchaseProduct(id, price) {
+  familysubmit() {
     this.setState({ loading: true })
-    this.state.marketplace.methods.purchaseProduct(id).send({ from: this.state.account, value: price })
-    .once('receipt', (receipt) => {
-      this.setState({ loading: false })
-    })
-  }
-
+    // this.state.marketplace.methods.familysubmit().send({ from: this.state.account})
+    // .once('receipt', (receipt) => {
+    //   this.setState({ loading: false })
+    // })
+  } 
   render() {
     return (
       <div>
@@ -129,7 +128,7 @@ class App extends Component {
                 : <Main
                   products={this.state.products}
                   createProduct={this.createProduct}
-                  purchaseProduct={this.purchaseProduct} />
+                  familysubmit={this.familysubmit} />
               }
             </main>
           </div>

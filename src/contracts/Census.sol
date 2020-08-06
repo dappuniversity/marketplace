@@ -1,5 +1,6 @@
 pragma solidity ^0.5.0;
 
+
 contract Census {
     string public name;
     uint public personCount = 0;
@@ -75,11 +76,11 @@ contract Census {
     function getfamilymember(uint _householdID, uint _member) view public returns (string memory) {
         return households[_householdID].members[_member].name;
     }
-function familysubmit() public {
-    require(households[lasthouseholdID].members.length > 0);
-Householdadded[lasthouseholdID] = true ;
-lasthouseholdID ++;
-} 
+// function familysubmit() public {
+//     require(households[lasthouseholdID].members.length > 0);
+// Householdadded[lasthouseholdID] = true ;
+// lasthouseholdID ++;
+// } 
 function gethousholdID() public returns(uint) {
             Householdadded.push(false);
         if (Householdadded[lasthouseholdID]){
