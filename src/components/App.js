@@ -50,12 +50,12 @@ class App extends Component {
  //     this.setState({ households })
       
       // Load products
-  /*     for (var i = 1; i <= member; i++) {
-        const product = await marketplace.methods.households(householdID).members(i).call()
+       for (var i = 1; i < member; i++) {
+        const product = await marketplace.methods.households(0).members(i).call()
        this.setState({
           products: [...this.state.products, product]
         })
-      } */
+      } 
       this.setState({ loading: false})
     } else {
       window.alert('Marketplace contract not deployed to detected network.')

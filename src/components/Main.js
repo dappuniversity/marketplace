@@ -99,6 +99,7 @@ class Main extends Component {
           </div>
 
           <button type="submit" className="btn btn-primary">Add family member</button>
+          <button type="submit" className="btn btn-primary" >submit family</button>
         </form>
         <p>&nbsp;</p>
         <h2>Currently added</h2>
@@ -118,7 +119,7 @@ class Main extends Component {
                 <tr key={key}>
                   <th scope="row">{product.id.toString()}</th>
                   <td>{product.name}</td>
-                  <td>{window.web3.utils.fromWei(product.price.toString(), 'Ether')} Eth</td>
+                  <td>{product.race} Eth</td>
                   <td>{product.owner}</td>
                   <td>
                     { !product.purchased
