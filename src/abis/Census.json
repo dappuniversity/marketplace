@@ -5365,77 +5365,14 @@
   },
   "networks": {
     "5777": {
-      "events": {
-        "0x2bc22403ccd085646fd0acc393542b3ca6d3f180f4fde70629d5087364decbb5": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": false,
-              "internalType": "uint256",
-              "name": "id",
-              "type": "uint256"
-            },
-            {
-              "indexed": false,
-              "internalType": "string",
-              "name": "race",
-              "type": "string"
-            },
-            {
-              "indexed": false,
-              "internalType": "string",
-              "name": "country",
-              "type": "string"
-            }
-          ],
-          "name": "ProductCreated",
-          "type": "event"
-        },
-        "0x79558d0d7d4d900e2f15c4cc0a665f1acdbe415e44de900ecdd1e5bf12b56f4e": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": false,
-              "internalType": "uint256",
-              "name": "id",
-              "type": "uint256"
-            },
-            {
-              "indexed": false,
-              "internalType": "string",
-              "name": "name",
-              "type": "string"
-            },
-            {
-              "indexed": false,
-              "internalType": "uint256",
-              "name": "price",
-              "type": "uint256"
-            },
-            {
-              "indexed": false,
-              "internalType": "address payable",
-              "name": "owner",
-              "type": "address"
-            },
-            {
-              "indexed": false,
-              "internalType": "bool",
-              "name": "purchased",
-              "type": "bool"
-            }
-          ],
-          "name": "ProductPurchased",
-          "type": "event"
-        }
-      },
+      "events": {},
       "links": {},
-      "address": "0x02e009dEDaBc27EF8a40C2a97518Fe6574AB9f74",
-      "transactionHash": "0xf351ca09308be76d94008ff6ad0aa706991a1188e582d2d290cda435f10a7778"
+      "address": "0xa982D018B5d5bC5D3CeCcF76D1f1A32aD1a48E8a",
+      "transactionHash": "0xda369457d51ebd057339c0bb97410e8301d0fec04a9a5455db6fbf38a3e2f728"
     }
   },
   "schemaVersion": "3.0.2",
-  "updatedAt": "2020-08-06T04:12:01.218Z",
+  "updatedAt": "2020-08-06T04:53:08.175Z",
   "devdoc": {
     "methods": {}
   },
