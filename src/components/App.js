@@ -42,8 +42,8 @@ class App extends Component {
       //window.alert(marketplace.methods)
       
       const householdID = await marketplace.methods.lasthouseholdID().call()
-      var member = await marketplace.methods.households(householdID).members.lenght;
-      
+      var member = await marketplace.methods.households(householdID).members.length;
+
  //     var households = await marketplace.methods.households()
       // this.setState({ member })
       this.setState({ householdID:householdID })
