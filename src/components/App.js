@@ -51,7 +51,7 @@ class App extends Component {
       
       // Load products
        for (var i = 1; i <= member; i++) {
-        const product = await marketplace.methods.getfamilymember(0,i-1).call()
+        const product = await marketplace.methods.getfamilymember(householdID,i-1).call()
        this.setState({
           products: [...this.state.products, product]
         })
