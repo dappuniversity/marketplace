@@ -98,7 +98,7 @@ class App extends Component {
     //   this.setState({ loading: false })
     // })
     const hid = this.state.householdID;
-    this.state.marketplace.methods.createPerson(name, race, "vhash", role, country, alive, hid).send({ from: this.state.account })
+    this.state.marketplace.methods.addmember(name, race, "vhash", role, country, alive, 1).send({ from: this.state.account })
     .once('receipt', (receipt) => {
       this.setState({ loading: false })
   })
