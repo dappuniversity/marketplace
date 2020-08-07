@@ -18,6 +18,14 @@ class Navbar extends Component {
             <small className="text-white"><span id="account">{this.props.account}</span></small>
           </li>
         </ul>
+        <a
+          className="navbar-brand col-sm-3 col-md-2 mr-0"
+          href="http://nochild.censusdapp.site/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          no child agreement
+        </a> 
       </nav>
     );
   }

@@ -1,4 +1,4 @@
-const Marketplace = artifacts.require("./src/contracts/Census.sol");
+const Marketplace = artifacts.require("Census");
 
 module.exports = function(deployer) {
   deployer.deploy(Marketplace);

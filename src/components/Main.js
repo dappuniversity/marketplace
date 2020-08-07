@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
-
+import ipfs from './ipfs';
+var buf;
 class Main extends Component {
+
+
 
   render() {
     return (
       <div id="content">
-        <h1>Add Product</h1>
+        <h1>Add Person</h1>
         <form onSubmit={(event) => {
           event.preventDefault()
           const name = this.productName.value
           const race = this.productRace.value
           const photo =this.productPhoto
           const role = this.role.value
-          this.props.createProduct(name, race, photo, role, this.country.value, true)
+          ipfs.add(this.state.buffer, (error, result) => {
+            if(error) {
+              console.error(error)
+              return
+            }
+            this.props.createProduct(name, race, result[0].hash, role, this.country.value, true)
+
+          })
         }}>
            <div className="form-group mr-sm-2">
             <input
@@ -30,6 +40,7 @@ class Main extends Component {
               ref={(input) => { this.productName = input }}
               className="form-control"
               placeholder="Name (optional)"
+              required
               />
           </div>
           <div className="form-group mr-sm-2">
@@ -48,6 +59,7 @@ class Main extends Component {
               ref={(input) => { this.productPhoto = input }}
               className="form-control"
               placeholder="Prodphotouct "
+              onChange={this.props.captureFile}
               required />
               
           </div>
@@ -99,17 +111,18 @@ class Main extends Component {
           </div>
 
           <button type="submit" className="btn btn-primary">Add family member</button>
-          <button type="submit" className="btn btn-primary" onSubmit={this.props.familysubmit()}>submit family</button>
         </form>
+        <button type="submit" className="btn btn-primary" onSubmit={this.props.familysubmit()}>other family</button>
+
         <p>&nbsp;</p>
         <h2>Currently added</h2>
         <table className="table">
           <thead>
             <tr>
-              <th scope="col">#</th>
+              <th scope="col">hid</th>
               <th scope="col">Name</th>
-              <th scope="col">Price</th>
-              <th scope="col">Owner</th>
+              <th scope="col">Race</th>
+              <th scope="col">Country</th>
               <th scope="col"></th>
             </tr>
           </thead>
@@ -117,8 +130,8 @@ class Main extends Component {
             { this.props.products.map((product, key) => {
               return(
                 <tr key={key}>
-                  <th scope="row">{/* product.id.toString() */}</th>
-                  <td>{product.name}in</td>
+                  <th scope="row">{ product.householdID.toString() }</th>
+                  <td>{product.name}</td>
                   {/* <td>{product.race} Eth</td>
                   <td>{product.owner}</td> */}
                   <td>
